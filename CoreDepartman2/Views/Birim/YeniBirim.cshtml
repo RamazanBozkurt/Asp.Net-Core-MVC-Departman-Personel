@@ -1,0 +1,13 @@
+﻿@model CoreDepartman2.Models.Birim
+@{
+    ViewData["Title"] = "YeniBirim";
+    Layout = "~/Views/Shared/_LayoutTest.cshtml";
+}
+
+<form class="form-check form-group mt-3" method="post">
+    <strong>Birim Adı</strong>
+    @Html.TextBoxFor(birim => birim.Ad, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form>
+

@@ -1,0 +1,26 @@
+﻿@model CoreDepartman2.Models.Personel
+@{
+    ViewData["Title"] = "PersonelGetir";
+    Layout = "~/Views/Shared/_LayoutTest.cshtml";
+}
+
+<br />
+@using (Html.BeginForm("PersonelGuncelle", "Personel", FormMethod.Post))
+{
+    <br />
+    <strong>Personel Adı</strong>
+    @Html.TextBoxFor(personel => personel.Ad, new { @class = "form-control" })
+
+    <br />
+    <strong>Personel Soyadı</strong>
+    @Html.TextBoxFor(personel => personel.Soyad, new { @class = "form-control" })
+
+    <br />
+    <strong>Şehir</strong>
+    @Html.TextBoxFor(personel => personel.Sehir, new { @class = "form-control" })
+
+    <br />
+
+    <button class="btn btn-info">Personel Güncelle</button>
+}
+

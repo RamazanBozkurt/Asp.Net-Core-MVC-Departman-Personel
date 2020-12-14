@@ -1,0 +1,22 @@
+﻿@model CoreDepartman2.Models.Personel 
+@{
+    ViewData["Title"] = "YeniPersonel";
+    Layout = "~/Views/Shared/_LayoutTest.cshtml";
+}
+
+<form class="form-check form-group mt-3" method="post">
+    <strong>Personel Adı</strong>
+    @Html.TextBoxFor(personel => personel.Ad, new { @class = "form-control" })
+    <br />
+    <strong>Personel Soyadı</strong>
+    @Html.TextBoxFor(personel => personel.Soyad, new { @class = "form-control" })
+    <br />
+    <strong>Şehir</strong>
+    @Html.TextBoxFor(personel => personel.Sehir, new { @class = "form-control" })
+    <br />
+    <strong>Birim</strong>
+    @Html.DropDownListFor(personel => personel.Birim.Id, (List<SelectListItem>)ViewBag.dgr, new {@class = "form-control"})
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form>
+
